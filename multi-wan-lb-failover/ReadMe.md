@@ -1,5 +1,5 @@
 
-# Condensé : Configuration Multi-WAN MikroTik RB951Ui-2HnD
+# Configuration Multi-WAN MikroTik RB951Ui-2HnD
 
 ## 🎯 Besoin Initial
 
@@ -12,6 +12,7 @@ Configurer un routeur MikroTik RB951Ui-2HnD avec :
 ether1 (distance=1) → PRIORITAIRE ✓ Utilisé à 100%
 ether2 (distance=2) → Backup (utilisé seulement si ether1 tombe)
 ether3 (distance=3) → Backup du backup (utilisé si ether1 ET ether2 tombent)
+
 ```
 
 ### Répartition du trafic Internet :
@@ -21,14 +22,16 @@ ether3 (distance=3) → Backup du backup (utilisé si ether1 ET ether2 tombent)
 - ✅ Basculement automatique uniquement en cas de panne
 
 ### Schéma :
-```
+
 ┌─────────────┐
 │ Trafic LAN  │
 └──────┬──────┘
+
        │
        ├──> ether1 (WAN1) ████████████ 100% ✓
        │
        ├──> ether2 (WAN2) ............ 0% (en attente)
        │
        └──> ether3 (WAN3) ............ 0% (en attente)
+
 ```
