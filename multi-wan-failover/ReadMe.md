@@ -7,7 +7,6 @@ Configurer un routeur MikroTik RB951Ui-2HnD avec :
 - **3 connexions Internet** (box sur ether1, ether2, ether3)
 - **Accès garanti** aux interfaces de gestion des box (192.168.8.1 et 192.168.80.1)
 - **Failover automatique** : basculement si un WAN tombe
-- **Pas de conflit** entre le routage forcé et le load balancing
   
 ether1 (distance=1) → PRIORITAIRE ✓ Utilisé à 100%
 ether2 (distance=2) → Backup (utilisé seulement si ether1 tombe)
